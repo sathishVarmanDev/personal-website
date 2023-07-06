@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Sathish Varman</title>
+</head>
+
+<!-- data-bs-spy="scroll" appended to body so that scrollspy can monitor the scrolling of the content in the body element -->
+<!-- data-bs-target=".navbar" monitors the hrefs inside the .navbar class in the body element. thus, when user is viewing the homepage(where the id="home"), scrollspy will compare that id with the href inside .navbar, and if it is the same, scrollspy will add .active class to the href element  -->
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <!-- NAVBAR -->
+  <!-- fixed-top moves the navbar to the stay fixed at the top even when scroll down. Navbar will now overlap document's body(both body and navbar will start from top of the page) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- flex-lg-column makes elements inside the container verticaly alligned at viewports lg and above -->
+    <div class="container d-flex flex-lg-column">
+      <!-- mb-lg-4 sets margin bottom to 4rem -->
+      <a class="navbar-brand mb-lg-4 mx-lg-auto" href="#">
+        <!-- d-lg-none makes the the span to display:none at viewports lg and above -->
+        <!-- d-block makes the the span to display:block at viewports lg and above -->
+        <span class="h3 fw-bold d-lg-none">Sathish Varman</span>
+        <!-- d-none means img is not visible -->
+        <!-- d-lg-block makes img visible from lg and above -->
+        <!-- rounded-circle makes img circle(bootstrap applies a 50% border-radius) -->
+        <img src="./images/sathish-1.png" alt="sathish"
+          class="profile-image d-none d-lg-block rounded-circle mx-auto img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- flex-lg-column makes elements inside the container verticaly alligned at viewports lg and above -->
+        <!-- text-lg-center makes text centered at viewports lg and above -->
+        <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- # NAVBAR -->
+
+
+  <!-- Content Wrapper -->
+  <div id="content-wrapper">
+    <!-- Home -->
+    <div id="home" class="full-height">
+      <div class="container mx-0 px-lg-5">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <!-- data-aos="fade-up" adds a fade animation using the aos.css -->
+            <h1 class="display-4 fw-bold" data-aos="fade-up">HI, MY NAME IS <span class="text-brand">SATHISH</span></h1>
+            <!-- 'lead' is a bootstrap class that sets the text to font-size: 1.25rem; & font-weight: 300; -->
+            <!-- data-aos-delay="300" makes the data-aos="fade-up" animation to trigger after 300ms after browser loads -->
+            <p class=" lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">I am a frontend web developer with a
+              focus on ReactJS, Javascript, Bootstrap, CSS & HTML</p>
+            <!-- <button href="#portfolio" class="btn btn-brand">Explore my portfolio</button>
+          <button href="#portfolio" class="btn btn-brand">Explore my portfolio</button> -->
+            <!-- data-aos-delay="600" makes the data-aos="fade-up" animation to trigger after 600ms after browser loads -->
+            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="600">
+              <div class="mb-3 mb-md-0">
+                <a href="https://drive.google.com/file/d/1zRp1yEjmpxpnMEjwk-ghYlGWT_Jko998/view?usp=sharing"
+                  target="_blank" class="btn btn-brand me-3">View Resume</a>
+              </div>
+              <div class=" my-auto">
+                <a href="#" class="custom-link">Email: sathish.varman.dev@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- # Home -->
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="full-height mx-0 px-lg-5">
+      <div class="container">
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+            <h6 class="text-brand">PORTFOLIO</h6>
+            <h1>My Indie Projects</h1>
+          </div>
+        </div>
+
+        <div class="row d-flex row-gap-4">
+          <!-- Portfolio 1 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/moviepitch.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>ChatGPT For Movies</h4>
+                <a href="https://github.com/sathishVarmanDev/ChatGPT-For-Movies" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 2 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/tenzies.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>Tenzies Game</h4>
+                <a href="https://github.com/sathishVarmanDev/tenzies" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 3 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/speed_typing_game.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>Speed Typing Game</h4>
+                <a href="https://github.com/sathishVarmanDev/speed-typing-game" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 4 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/notes_app.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>Notes App</h4>
+                <a href="https://github.com/sathishVarmanDev/notes-app" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 5 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/meme_generator.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>Meme Generator</h4>
+                <a href="https://github.com/sathishVarmanDev/meme-generator" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Portfolio 6 -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-custom rounded-4 shadow-effect bg-base h-100">
+              <div class="card-custom-image rounded-4">
+                <img src="./images/ecommerce.png" class="img-fluid" alt="movie pitch">
+              </div>
+              <div class="card-custom-content p-4">
+                <h4>Ecommerce App</h4>
+                <a href="https://github.com/sathishVarmanDev/ecommerce" target="_blank">
+                  <i class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- # Portfolio -->
+
+    <!-- About -->
+    <section id="about" class="full-height mx-0 px-lg-5">
+      <div class="container">
+        <div class="row pb-4" data-aos="fade-up">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h6 class="text-brand">ABOUT</h6>
+            <h1>My Education & Experience</h1>
+          </div>
+        </div>
+
+        <!-- 2 Column row(For Education & Experience) -->
+        <div class="row d-flex row-gap-5">
+          <!-- Column 1: Education -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Education</h3>
+            <!-- Column data of Education  -->
+            <div class="row d-flex row-gap-4">
+              <!-- Education 1 -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-base p-4 rounded-4 shadow-effect">
+                  <h4>Self Taught Frontend Web Developer</h4>
+                  <p class="text-brand mb-2">Self Taught (Feb 2023 - Present)</p>
+                  <p class="mb-0">During the course, I learned HTML, CSS, Bootstrap, JavaScript & ReactJS. By using
+                    these skills, I developed indie projects like MoviePitch: ChatGPT For Movies, Meme Generator, Notes
+                    App, Tenzies Game, Speed Typing Game & PicSome: e-commerce app.</p>
+                </div>
+              </div>
+              <!-- # Education 1 -->
+
+              <!-- Education 2 -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-base p-4 rounded-4 shadow-effect">
+                  <h4>Bachelors in Computer Science(Cybersecurity)</h4>
+                  <p class="text-brand mb-2">Taylor's University (2020 - 2023)</p>
+                  <p class="mb-0">Acquired a broad understanding of computer systems, programming languages, algorithms,
+                    data structures, software development methodologies, and problem-solving skills.</p>
+                </div>
+              </div>
+              <!-- # Education 2 -->
+            </div>
+            <!-- # Column data of Education  -->
+          </div>
+          <!-- # Column 1: Education -->
+
+          <!-- Column 2: Experience -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h3 class="mb-4" data-aos="fade-up" data-aos-delay="300">Experience</h3>
+            <!-- Column data of Experience  -->
+            <div class="row d-flex row-gap-4">
+              <!-- Experience 1 -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-base p-4 rounded-4 shadow-effect">
+                  <h4>Product Manager & Business Lead</h4>
+                  <p class="text-brand mb-2">Glumos (August 2023 - Present)</p>
+                  <p class="mb-0">My role involves planning, collaborating with the development team, and implementing
+                    new features while managing social media to create content, announce updates, gather user feedback,
+                    and use it as a foundation for future feature development.</p>
+                </div>
+              </div>
+              <!-- # Experience 1 -->
+
+              <!-- Experience 2 -->
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" data-aos="fade-up" data-aos-delay="600">
+                <div class="bg-base p-4 rounded-4 shadow-effect">
+                  <h4>Intern Project/Product Manager</h4>
+                  <p class="text-brand mb-2">QuickDesk (April 2023 - July 2023)</p>
+                  <p class="mb-0">At QuickDesk, I planned, executed, and reviewed features for B2B clients. I also
+                    managed projects through agile methodologies and JIRA for the project management team.</p>
+                </div>
+              </div>
+              <!-- # Experience 2 -->
+            </div>
+            <!-- # Column data of Experience  -->
+          </div>
+          <!-- # Column 2: Experience -->
+        </div>
+        <!-- # 2 Column row(For Education & Experience) -->
+      </div>
+    </section>
+    <!-- # About -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row d-flex align-items-center justify-content-between py-2 px-2">
+          <div class="col-auto d-flex align-items-center">
+            <p class="my-0">Developed with ❤️ by <span class="fw-bold">Sathish</span></p>
+          </div>
+          <div class="col-auto d-flex align-items-center">
+            <div class="social-icons">
+              <a href="https://github.com/sathishVarmanDev" target="_blank"><i
+                  class="icon fa-brands fa-github fa-2x rounded-4" style="color: #eef3db;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- # Footer -->
+  </div>
+  <!-- # Content Wrapper -->
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script type="module" src="index.js"></script>
+
+</html>

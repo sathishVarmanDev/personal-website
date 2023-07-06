@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ":root" is a pseudo class  */
+    /* :root represents the html element but it has a higher specifity */
+    /* the custom properties are reusable, thus can be called via "var()" on elements later */
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree", "sans-serif";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    /* 700 means bold */
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    /* 
+        > 'all' means all the css properties that are transitionable in the "a" tag
+        > 0.4 means the transtion will be .4s long
+        > ease means start slow, fast midway, end slow
+    */
+    transition: all 0.4 ease;
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+/* 
+    > apply the transtion effect 
+    > :hover is a pseudo class(defines a state of an alement
+*/
+a:hover {
+    color: var(--color-brand);
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 80px; 
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+/* ----- Navbar ----- */
+/* this style applies to navbar when viewport is 0px to 991px */
+.navbar {
+    background-color: var(--color-base);
+}
+
+/* update color when .active class is added to the .nav-link class(provided .nav-link needs to be inside .navbar)*/
+.navbar .nav-link.active {
+    color: var(--color-brand)   
+}
+/* .navbar .nav-link selects the .nav-link class that are nested inside the .navbar class */
+.navbar .nav-link {
+    text-transform:uppercase;
+    color: white;
+    /* 700 means bold */
+    font-weight: 700; 
+}
+/* .navbar .nav-link selects the .nav-link:hover pseudo class that are nested inside the .navbar class */
+/* 
+    > need to specify both the .navbar .nav-link:hover so that we can overwrite any default :hover effect set by .navbar class to its child elements by bootstrap. 
+    > Alternatively, can use !important:
+        .nav-link:hover {color: var(--color-brand) !important;}
+*/
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+/* when width is 992px and above, target the .navbar class & make the changes */
+@media (min-width: 992px) {
+    .navbar {
+        /* sets min height of navbar to 100 of viewport height */
+        min-height: 100vh;
+        /* sets navbar width to 240px */
+        width:var(--sidbar-width);
+        /* background:(<background-color>,<background-image>)  */
+        /* linear-gradient() takes in 2 colors where the 1st is the start color and the 2nd is the end color. the 1st color starts at the top & the 2nd color goes to the bottom */
+        /* url is for background-image. it will be layered at the back of background-color */
+        background: linear-gradient(rgba(3, 63, 71, 0.9), rgba(3, 63, 71, 0.9)), url(../images/sidebar-img.jpg);
+        /* set the background to take up the entire navbar. cons is that this doesnt scale the image while maintaining its original ratio */
+        background-size: cover;
+        /* set the background to be positioned in the center of the navbar so that the middle part of img is visible */
+        background-position: center;
+    }
+
+    .profile-image {
+        border: 8px solid var(--color-brand);
+    }
+
+    #content-wrapper {
+        padding-left: 240px;
+    }
+}
+
+/* --- Button --- */
+.btn {
+    padding: 12px 28px;
+    /* 700 means bold */
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(var(--color-brand));
+    color:var(var(--color-base));
+}
+
+.btn-brand:hover, .brn-brand:focus {
+    background-color: var(--color-brand2);
+    border-color: var(--color-brand2);
+    color: var(--color-base);
+}
+
+.custom-link {
+    font-weight: 700;
+    position: relative
+}
+
+/* ::after is a pseudo element that is appended to .custom-link */
+/* ::after will appear after the .custom-link element */
+.custom-link::after {
+    /* specifies the value inside the ::after element. Must either be "" or something else ::after element will now show */
+    content: "";
+    /* position will now be relate to .custom-link */
+    position: absolute;
+    left: 0;
+    /* placed 10% beneath .custom-link */
+    top: 100%;
+    background-color: var(--color-brand2);
+    height: 2px;
+    width: 0%;
+    transition: all 0.4s;
+}
+
+/* when user hovers on .custom-link, the ::after pseudo element's width gets updated */
+.custom-link:hover::after {
+    width: 100%;
+}
+
+/* --- Portfolio --- */
+.shadow-effect {
+/* transition: <property>, <duration>, <timing function> */
+/* <timing function> can be linear, ease, ease-in, ease-out, ease-in-out */
+    transition: all 0.5s ease;
+}
+
+.shadow-effect:hover {
+/* box-shadow: <x axis>, <y axis>, <blur>, <spread>, <color> ; */
+/* for y axis, positive means downwards */
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+.icon {
+   display: inline-block;
+}
+
+.icon:hover {
+   animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+    0%,  
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* --- Card --- */
+/* select the .card-custom class that is nested inside the .card-custom class */
+.card-custom .card-custom-image {
+    /* ensure the img element will not flow outside of the card-custom-image class when it is being hovered */
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    /* transition: <property> <duration> <timing function> */
+    /* timing function can be ease, ease-in, ease-out, ease-in-out */
+    transition: all 0.5s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1)
+} 
+
+
